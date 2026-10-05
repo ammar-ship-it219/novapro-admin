@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NovaPro — Business Admin</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="login" class="auth-shell">
+  <div class="auth-card">
+    <div class="brand large"><span class="brand-mark">N</span><div><b>NovaPro</b><small>Business Suite</small></div></div>
+    <h1>Welcome back</h1><p>Sign in to your professional workspace.</p>
+    <form id="loginForm">
+      <label>Email<input id="email" type="email" value="admin@example.com" required></label>
+      <label>Password<input id="password" type="password" value="ChangeMe123!" required></label>
+      <button class="primary wide">Sign in</button>
+      <div id="loginError" class="error"></div>
+    </form>
+    <div class="demo">Demo admin: admin@example.com / ChangeMe123!</div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-mark">N</span><div><b>NovaPro</b><small>Business Suite</small></div></div>
+    <nav>
+      <button data-page="dashboard" class="nav active">⌂ <span>Dashboard</span></button>
+      <button data-page="orders" class="nav">▣ <span>Orders</span></button>
+      <button data-page="products" class="nav">◈ <span>Products</span></button>
+      <button data-page="users" class="nav">◉ <span>Customers</span></button>
+      <button data-page="analytics" class="nav">◒ <span>Analytics</span></button>
+      <button data-page="activity" class="nav">◷ <span>Activity Logs</span></button>
+      <button data-page="settings" class="nav">⚙ <span>Settings</span></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="secure">● <span>System secure</span></div><button id="logout" class="logout">↪ Sign out</button></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button id="menu" class="icon-btn">☰</button>
+      <div><h2 id="pageTitle">Dashboard</h2><span id="dateLine"></span></div>
+      <div class="top-actions">
+        <button id="theme" class="icon-btn">◐</button>
+        <button id="bell" class="icon-btn">♢<i id="badge"></i></button>
+        <div class="profile"><div class="avatar">A</div><div><b id="adminName">Admin</b><small>Administrator</small></div></div>
+      </div>
+    </header>
+
+    <section id="content" class="content"></section>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle">Create</h3><button id="modalClose" class="icon-btn">×</button></div><div id="modalBody"></div></div></div>
+<div id="toast"></div>
+<script src="/app.js"></script>
+</body></html>
